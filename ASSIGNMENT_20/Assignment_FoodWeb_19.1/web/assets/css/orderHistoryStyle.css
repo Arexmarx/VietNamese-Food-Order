@@ -1,0 +1,42 @@
+.wrap {
+    margin-top: 100px;
+}
+.Order-icon {
+    color: rgb(238, 77, 45);
+    transition: transform 0.3s ease-in-out;
+}
+.Order-icon:hover {
+    transform: scale(1.25);
+}
+.order-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.order-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+.order-item:last-child {
+    border-bottom: none;
+}
+.order-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+.order-item .order-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+.notify{
+    text-align: center;
+}
+.order-divider {
+    border-top: 1px dashed #ddd;
+    margin: 20px 0;
+}

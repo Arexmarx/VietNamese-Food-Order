@@ -1,0 +1,88 @@
+<%-- 
+    Document   : viewSearch
+    Created on : Jul 1, 2024, 5:25:50 PM
+    Author     : Admin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="/WEB-INF/tlds/tagLIB.tld" prefix="f"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="v" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/assets/css/weeklyMenuStyle.css">
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/assets/css/viewSearchStyle.css">
+        <title>JSP Page</title>
+    </head>
+    <body>
+
+        <c:set var="weeklyList" value="${requestScope.weeklyMenuDetailList}"/>
+        <c:set var="weekly" value="${requestScope.weeklyMenu}"/>
+
+
+
+        <c:if test="${weeklyList != null}">
+            <c:if test="${weeklyList.size() > 0}">
+                <div>
+                    <h1 id="menu-name" style="margin-top: 60px; text-align: center">${weekly.name} 
+                        <v:formatDate value="${weekly.startDate}" pattern="dd/MM" />-
+                        <v:formatDate value="${weekly.endDate}" pattern="dd/MM" />
+                    </h1>
+                    <div class="container">
+                        <div class="row slide-show">
+                            <div class="col-xs-11 col-md-10 col-centered">
+                                <div id="carousel-${loopStatus.index}" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
+                                    <div class="carousel-inner">
+                                        <c:forEach var="a" items="${weeklyList}" varStatus="status">                                             
+                                            <div class="item ${status.index == 0 ? 'active' : ''}">
+                                                <div class="carousel-col">
+                                                    <f:food idFood="${a.foodID}"></f:food>
+                                                    </div>
+                                                </div> 
+                                        </c:forEach>
+
+                                    </div>
+                                    <!-- Controls -->
+                                    <div class="left carousel-control">
+                                        <a href="#carousel-${loopStatus.index}" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </div>
+                                    <div class="right carousel-control">
+                                        <a href="#carousel-${loopStatus.index}" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </c:if>
+            <c:if test="${weeklyList.size() == 0}">
+                <div class="block-week">
+                    <h1 id="menu-name" style="margin-top: 60px;text-align: center">${weekly.name} 
+                        <v:formatDate value="${weekly.startDate}" pattern="dd/MM" />-
+                        <v:formatDate value="${weekly.endDate}" pattern="dd/MM" />
+                    </h1>
+                    <div id="empty-list">
+                        <i id="logo" class="fa-solid fa-utensils"></i>
+                        <p>Thực Đơn Đang Được Chế Biến!!!</p>
+                    </div>
+                </div>
+            </c:if>    
+        </c:if>
+        <script src="<%= request.getContextPath()%>/assets/js/notifications.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="<%= request.getContextPath()%>/assets/js/weeklyMenuSlide.js"></script>
+        <script src="<%= request.getContextPath()%>/assets/js/utils.js"></script>
+    </body>
+</html>

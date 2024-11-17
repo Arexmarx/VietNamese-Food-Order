@@ -1,0 +1,25 @@
+.table {
+    margin-top: 30px;
+    font-size: 15px;
+}
+.button-option{
+    font-size: 15px;
+}
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table th {
+    background-color: #f8f9fa;
+    border: none; /* Loại bỏ border */
+}
+.table td {
+    background-color: #e9ecef;
+    width: 50%; /* Độ rộng cố định cho từng cột */
+}
+.btn-group {
+    margin-bottom: 5px;
+}
+.btn-add {
+    margin-left: 5px;
+}

@@ -1,0 +1,39 @@
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh; /* Ensure it takes the full viewport height */
+    position: fixed; /* Keep the sidebar fixed while scrolling */
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px; /* Increase the font size */
+    font-family: 'Arial', sans-serif; /* Choose a pleasing font */
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Increase the font size */
+    font-family: 'Arial', sans-serif; /* Choose a pleasing font */
+    padding: 10px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757; /* Add hover effect for better aesthetics */
+    border-radius: 4px; /* Slightly round the corners */
+}

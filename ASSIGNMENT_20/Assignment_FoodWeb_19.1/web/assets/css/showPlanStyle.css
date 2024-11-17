@@ -1,0 +1,13 @@
+main{
+    margin: 0 10%; 
+    padding: 0 20px;
+    padding-top: 60px;
+    min-height: 800px;
+    box-shadow: 5px 5px 5px 5px #cccccc;
+}
+.list-plan{
+    font-size: 20px;
+}
+.panel-body {
+    min-height: 350px; /* Điều chỉnh chiều cao tối thiểu theo ý bạn */
+}

@@ -1,0 +1,108 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+.navbar {
+    margin-bottom: 0;
+    background-color: rgb(238, 77, 45);
+    border-radius: 0;
+    border: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 5px 5px 2px 1px #cccccc;
+}
+.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbar-nav {
+    margin: 0;
+}
+.navbar-header {
+    margin-right: 20px;
+}
+.input-group {
+    max-width: 700px;
+    margin: 8px 10px 0 15px;
+    padding: 0;
+    height: 30px;
+    border-radius: 2%;
+}
+.form-control{
+    height: 35px; 
+    font-size: 20px; 
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#search-button{
+    height: 35px;
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px;
+}
+.navbar-right {
+    margin-right: 0;
+    padding-left: 160px;
+}
+.navbar-right li a {
+    padding: 15px 10px;
+}
+
+.dropdown-menu{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border-radius: 5%;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    background-color: rgb(238, 77, 45);
+}
+.task{
+    padding-left: 5px;
+}
+
+.search{
+    padding-right: 0px;
+    padding-left: 10px;
+}
+
+.cuoi{
+    background-color: rgb(238, 77, 45);
+    color: white;
+    height: 200px;
+    width: 100%;
+    bottom: -50px;
+    position: relative;
+    box-shadow: 1px 4px 5px 1px #cccccc;
+}
+
+.logo-cuoi{
+    text-align: center;
+    padding-left: 45%;
+    padding-top: 10px;
+}
+.logo-cuoi a i{
+    font-size: 25px;
+    color: white;
+}
+.logo-cuoi a i:hover{
+    color: rgba(255,255,255,0.7);
+}
+.chu-cuoi{
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.space-header{
+    padding-top: 60px; 
+    padding-bottom: 50px; 
+    position: static; 
+}
+
+
+
+
+
+

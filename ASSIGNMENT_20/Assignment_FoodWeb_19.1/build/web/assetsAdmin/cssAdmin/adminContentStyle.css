@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Canh giữa và tạo khoảng cách đều giữa các phần tử */
+    flex-wrap: wrap; /* Cho phép các phần tử nằm trên nhiều hàng nếu không đủ chỗ */
+}
+
+.chart-container {
+    width: 50%; /* Điều chỉnh độ rộng cho hai biểu đồ */
+    height: 50%;
+    margin: 20px 0; /* Thêm khoảng cách giữa các hàng */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.fa-user-tie {
+    color: black;
+    margin-bottom: 20px;
+}
+.admin{
+    margin-top: 10%;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+
